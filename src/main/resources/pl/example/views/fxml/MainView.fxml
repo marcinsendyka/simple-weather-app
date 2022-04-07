@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import java.net.URL?>
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1">
+   <stylesheets>
+      <URL value="@textfonts.css"/>
+   </stylesheets>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+      </MenuBar>
+   </top>
+   <left>
+      <VBox alignment="TOP_CENTER" spacing="10.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+         </padding>
+         <ToggleButton fx:id="checkWeather" minHeight="50.0" mnemonicParsing="false" onAction="#checkWeatherAction"
+                       prefWidth="150.0" text="Check weather" styleClass="text" textAlignment="CENTER" wrapText="true"/>
+         <Label fx:id="temperatureLabel" text="Temperature" styleClass="text"/>
+         <Label fx:id="temperature" text="Value" styleClass="text"/>
+      </VBox>
+   </left>
+</BorderPane>

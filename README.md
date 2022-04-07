@@ -1,0 +1,1 @@
+Simple weather app to demonstrate how JavaFX application can be created.
