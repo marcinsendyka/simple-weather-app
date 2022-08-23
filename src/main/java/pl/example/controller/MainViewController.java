@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import pl.example.model.Weather;
+import pl.example.model.CurrentWeatherAndForecast;
 import pl.example.model.WeatherService;
 import pl.example.model.WeatherServiceFactory;
 
@@ -46,16 +46,16 @@ public class MainViewController implements FxmlDefinedController, Initializable 
         String homeCity = "Kraków"; // get actual city name from text input
 
         // INVOKE BUSINESS LOGIC / MODEL
-        Weather weather = weatherService.getWeather(homeCity);
+        CurrentWeatherAndForecast weather = weatherService.getWeather(homeCity);
 
         // DISPLAY RESULT FROM BUSINESS LOGIC
         displayWeather(weather);
     }
 
-    public void displayWeather(Weather weatherForecast) {
+    public void displayWeather(CurrentWeatherAndForecast weatherForecast) {
         temperature.setVisible(true);
         temperatureLabel.setVisible(true);
-        temperature.setText("" + weatherForecast.getTempInCelsius());
+        temperature.setText("" + weatherForecast.getCurrentWeather().getTempInCelsius());
     }
 
 }
